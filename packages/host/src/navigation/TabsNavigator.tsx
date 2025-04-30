@@ -21,9 +21,9 @@ const Tabs = createNativeBottomTabNavigator<TabsParamList>();
 const TabsNavigator = () => {
   return (
     <Tabs.Navigator
-      translucent={false}
-      tabBarActiveTintColor={MD3Colors.primary50}
-      barTintColor={MD3Colors.primary95}>
+      screenOptions={{
+        tabBarActiveTintColor: MD3Colors.primary50
+      }}>
       <Tabs.Screen
         name="HomeNavigator"
         component={HomeNavigator}
