@@ -161,3 +161,29 @@ Super App showcase is an open source project and will always remain free to use.
 [callstack-badge]: https://callstack.com/images/callstack-badge.svg
 [callstack]: https://callstack.com/open-source/?utm_source=github.com&utm_medium=referral&utm_campaign=super-app-showcase&utm_term=readme-badge
 [callstack-readme-with-love]: https://callstack.com/?utm_source=github.com&utm_medium=referral&utm_campaign=super-app-showcase&utm_term=readme-with-love
+
+
+### Sum
+This is a React Native Super App showcase project that demonstrates micro-frontend architecture for mobile applications. Here are the key points:
+
+Structure:
+A host app (super app) that contains and coordinates all micro-frontends
+Multiple mini-apps (booking, shopping, dashboard, news) that can run both as part of the super app or standalone
+An auth module providing shared authentication functionality
+Technical Stack:
+Built with React Native
+Uses Re.Pack and Module Federation for micro-frontend implementation
+Uses pnpm as package manager
+Requires Node.js 22+
+Key Features:
+Runtime dependency management between modules
+Shared authentication across mini-apps
+Independent deployment capability for mini-apps
+Code signing for security
+Development servers running on different ports for each module
+Architecture Benefits:
+Allows splitting large apps into smaller, manageable parts
+Enables on-demand downloading of features
+Supports independent team development
+Provides flexibility between standalone and integrated modes
+The project serves as a reference implementation for building super apps using micro-frontend architecture in the mobile space, similar to what's common in web development.
