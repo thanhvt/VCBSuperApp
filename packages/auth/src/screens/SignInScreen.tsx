@@ -28,7 +28,7 @@ const SignInScreen = () => {
   };
 
   return (
-    <GradientBackground colors={['#1A237E', '#283593', '#3949AB']}>
+    <GradientBackground colors={['#1B5E20', '#2E7D32', '#388E3C']}>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.container}>
@@ -61,10 +61,10 @@ const SignInScreen = () => {
               onChangeText={setUsername}
               style={styles.input}
               mode="flat"
-              left={<TextInput.Icon icon="account-outline" color="#3949AB" />}
-              activeUnderlineColor="#3949AB"
-              underlineColor="#BBDEFB"
-              selectionColor="#3949AB"
+              left={<TextInput.Icon icon="account-outline" color="#2E7D32" />}
+              activeUnderlineColor="#2E7D32"
+              underlineColor="#C8E6C9"
+              selectionColor="#2E7D32"
             />
 
             <TextInput
@@ -74,23 +74,24 @@ const SignInScreen = () => {
               secureTextEntry={secureTextEntry}
               style={styles.input}
               mode="flat"
-              left={<TextInput.Icon icon="lock-outline" color="#3949AB" />}
+              left={<TextInput.Icon icon="lock-outline" color="#2E7D32" />}
               right={
                 <TextInput.Icon
                   icon={secureTextEntry ? 'eye-off-outline' : 'eye-outline'}
-                  color="#3949AB"
+                  color="#2E7D32"
                   onPress={() => setSecureTextEntry(!secureTextEntry)}
                 />
               }
-              activeUnderlineColor="#3949AB"
-              underlineColor="#BBDEFB"
-              selectionColor="#3949AB"
+              activeUnderlineColor="#2E7D32"
+              underlineColor="#C8E6C9"
+              selectionColor="#2E7D32"
             />
 
             <Button
               mode="contained"
               style={styles.button}
-              buttonColor="#3949AB"
+              contentStyle={styles.buttonContent}
+              buttonColor="#2E7D32"
               rippleColor="rgba(255, 255, 255, 0.2)"
               onPress={handleSignIn}
               uppercase>
@@ -107,7 +108,7 @@ const SignInScreen = () => {
               mode="outlined"
               style={styles.alternativeButton}
               icon="bank"
-              textColor="#1A237E"
+              textColor="#1B5E20"
               onPress={signIn}
               contentStyle={styles.alternativeButtonContent}>
               Vietcombank Digibank
@@ -117,7 +118,7 @@ const SignInScreen = () => {
               mode="outlined"
               style={styles.alternativeButton}
               icon="shield-account"
-              textColor="#1A237E"
+              textColor="#1B5E20"
               onPress={signIn}
               contentStyle={styles.alternativeButtonContent}>
               VNeID
@@ -183,7 +184,7 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(255, 255, 255, 0.95)',
   },
   welcomeHeadline: {
-    color: '#1A237E',
+    color: '#1B5E20',
     textAlign: 'center',
     marginBottom: 8,
     fontWeight: '700',
@@ -191,7 +192,7 @@ const styles = StyleSheet.create({
   welcomeText: {
     textAlign: 'center',
     marginBottom: 32,
-    color: '#5C6BC0',
+    color: '#388E3C',
     letterSpacing: 0.5,
   },
   input: {
@@ -205,7 +206,7 @@ const styles = StyleSheet.create({
     marginTop: -8,
   },
   forgotPasswordText: {
-    color: '#3949AB',
+    color: '#2E7D32',
     fontWeight: '600',
     fontSize: 14,
   },
@@ -217,26 +218,33 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     elevation: 4,
   },
+  buttonContent: {
+    height: 56,
+    margin: 0,
+    padding: 0,
+  },
   dividerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 20,
   },
   divider: {
-    flex: 1,
+    // flex: 1,
     height: 1,
-    backgroundColor: 'rgba(26, 35, 126, 0.2)',
+    backgroundColor: 'rgba(27, 94, 32, 0.2)',
   },
   dividerText: {
     paddingHorizontal: 16,
-    color: '#5C6BC0',
+    color: '#388E3C',
     fontSize: 14,
     fontWeight: '500',
+    textAlign: 'center',
+    flex: 1,
   },
   alternativeButton: {
     borderRadius: 8,
     marginBottom: 16,
-    borderColor: 'rgba(26, 35, 126, 0.3)',
+    borderColor: 'rgba(27, 94, 32, 0.3)',
     borderWidth: 1.5,
     height: 52,
   },
@@ -256,7 +264,7 @@ const styles = StyleSheet.create({
     marginLeft: -8,
   },
   signupButtonText: {
-    color: '#3949AB',
+    color: '#2E7D30',
     fontWeight: '600',
     fontSize: 14,
   },
