@@ -8,8 +8,9 @@ import {
   ImageBackground,
   Platform,
   Animated,
+  Alert,
 } from 'react-native';
-import { Text, Avatar, Surface } from 'react-native-paper';
+import { Text, Avatar, Badge, IconButton } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { MainStackParamList } from '../navigation/MainNavigator';
@@ -56,8 +57,8 @@ const AppTile = ({ title, icon, gradientColors, onPress, index }: AppTileProps) 
         style={styles.tileWrapper}
         activeOpacity={0.9}
       >
-        <Surface style={styles.tileSurface}>
-          <View style={[styles.tile, { backgroundColor: gradientColors[0] }]}>
+        <View style={[styles.tileSurface, { backgroundColor: gradientColors[0] }]}>
+          <View style={styles.tile}>
             <View style={styles.tileContent}>
               <Avatar.Icon
                 size={64}
@@ -68,7 +69,7 @@ const AppTile = ({ title, icon, gradientColors, onPress, index }: AppTileProps) 
               <Text style={styles.tileTitle}>{title}</Text>
             </View>
           </View>
-        </Surface>
+        </View>
       </TouchableOpacity>
     </Animated.View>
   );
@@ -93,29 +94,29 @@ const NavigationHubScreen: React.FC<NavigationHubScreenProps> = () => {
 
   const apps = [
     {
-      title: 'Banking',
-      icon: 'bank',
+      title: 'User profile',
+      icon: 'account',
       color: '#1B5E20',
-      gradientColors: ['#2E7D32', '#1B5E20'],
+      gradientColors: ['#0b7910', '#1B5E20'],
       onPress: () => navigation.navigate('Tabs'),
     },
     {
-      title: 'Payments',
-      icon: 'credit-card',
+      title: 'Human Resource',
+      icon: 'account-multiple',
       color: '#0D47A1',
       gradientColors: ['#1976D2', '#0D47A1'],
       onPress: () => navigation.navigate('Tabs'),
     },
     {
-      title: 'Shopping',
-      icon: 'shopping',
+      title: 'Approval Management',
+      icon: 'signature',
       color: '#C2185B',
       gradientColors: ['#E91E63', '#C2185B'],
       onPress: () => navigation.navigate('Shopping'),
     },
     {
-      title: 'Booking',
-      icon: 'calendar-check',
+      title: 'Utilities',
+      icon: 'home',
       color: '#E65100',
       gradientColors: ['#F57C00', '#E65100'],
       onPress: () => navigation.navigate('Booking'),
@@ -136,6 +137,34 @@ const NavigationHubScreen: React.FC<NavigationHubScreenProps> = () => {
     },
   ];
 
+  // Handle notification button press
+  const handleNotifications = () => {
+    Alert.alert('Notifications', 'You have no new notifications');
+  };
+
+  // Handle settings button press
+  const handleSettings = () => {
+    Alert.alert('Settings', 'Settings screen will be implemented soon');
+  };
+
+  // Handle exit button press
+  const handleExit = () => {
+    Alert.alert(
+      'Exit Application',
+      'Are you sure you want to exit?',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        { text: 'Exit', style: 'destructive', onPress: () => Alert.alert('Exit', 'App would exit here in production') },
+      ]
+    );
+  };
+
+  // Handle home button press - returns to navigation hub
+  const handleHome = () => {
+    // Already on home screen, could refresh or show message
+    Alert.alert('Home', 'You are already on the home screen');
+  };
+
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#1B5E20" />
@@ -145,6 +174,26 @@ const NavigationHubScreen: React.FC<NavigationHubScreenProps> = () => {
         resizeMode="cover"
       >
         <View style={styles.gradientOverlay}>
+          {/* Header with notification and settings buttons */}
+          {/* <View style={styles.topBar}>
+            <IconButton
+              icon="exit-to-app"
+              iconColor="white"
+              size={24}
+              onPress={handleExit}
+              style={styles.topBarButton}
+            />
+            <View style={styles.notificationContainer}>
+              <IconButton
+                icon="bell"
+                iconColor="white"
+                size={24}
+                onPress={handleNotifications}
+                style={styles.topBarButton}
+              />
+              <Badge visible={true} size={16} style={styles.notificationBadge}>3</Badge>
+            </View>
+          </View> */}
           <Animated.ScrollView
             style={styles.scrollView}
             contentContainerStyle={styles.scrollContent}
@@ -186,6 +235,37 @@ const NavigationHubScreen: React.FC<NavigationHubScreenProps> = () => {
               ))}
             </View>
           </Animated.ScrollView>
+          {/* Bottom Navigation Bar */}
+          <View style={styles.bottomNavBar}>
+            <IconButton
+              icon="home"
+              iconColor="white"
+              size={28}
+              onPress={handleHome}
+              style={styles.navButton}
+            />
+            <IconButton
+              icon="bell-outline"
+              iconColor="white"
+              size={28}
+              onPress={handleNotifications}
+              style={styles.navButton}
+            />
+            <IconButton
+              icon="cog-outline"
+              iconColor="white"
+              size={28}
+              onPress={handleSettings}
+              style={styles.navButton}
+            />
+            <IconButton
+              icon="logout"
+              iconColor="white"
+              size={28}
+              onPress={handleExit}
+              style={styles.navButton}
+            />
+          </View>
         </View>
       </ImageBackground>
     </View>
@@ -205,11 +285,59 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'rgba(27, 94, 32, 0.85)',
   },
+  topBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingTop: Platform.OS === 'ios' ? 50 : 16,
+    paddingBottom: 8,
+    backgroundColor: 'rgba(27, 94, 32, 0.5)',
+  },
+  topBarButton: {
+    margin: 0,
+  },
+  notificationContainer: {
+    position: 'relative',
+  },
+  notificationBadge: {
+    position: 'absolute',
+    top: 6,
+    right: 6,
+    backgroundColor: '#FF5252',
+  },
   scrollView: {
     flex: 1,
   },
   scrollContent: {
-    paddingBottom: 30,
+    paddingBottom: 80, // Add padding for bottom nav bar
+  },
+  bottomNavBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    backgroundColor: 'rgba(27, 94, 32, 0.9)',
+    paddingVertical: 8,
+    paddingBottom: Platform.OS === 'ios' ? 30 : 8, // Extra padding for iOS
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(255, 255, 255, 0.2)',
+    ...Platform.select({
+      ios: {
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: -3 },
+        shadowOpacity: 0.3,
+        shadowRadius: 4,
+      },
+      android: {
+        elevation: 8,
+      },
+    }),
+  },
+  navButton: {
+    margin: 0,
   },
   header: {
     padding: 24,
