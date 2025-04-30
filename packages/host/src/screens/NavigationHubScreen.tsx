@@ -97,7 +97,7 @@ const NavigationHubScreen: React.FC<NavigationHubScreenProps> = () => {
       title: 'User profile',
       icon: 'account',
       color: '#1B5E20',
-      gradientColors: ['#0b7910', '#1B5E20'],
+      gradientColors: ['#a5ad09', '#1B5E20'],
       onPress: () => navigation.navigate('Tabs'),
     },
     {
@@ -169,7 +169,8 @@ const NavigationHubScreen: React.FC<NavigationHubScreenProps> = () => {
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#1B5E20" />
       <ImageBackground
-        source={{ uri: 'https://images.unsplash.com/photo-1580048915913-4f8f5cb481c4?q=80&w=2069' }}
+        source={require('../assets/background.jpg')}
+        defaultSource={require('../assets/background.jpg')}
         style={styles.backgroundImage}
         resizeMode="cover"
       >
