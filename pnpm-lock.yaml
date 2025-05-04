@@ -396,6 +396,9 @@ importers:
       react-native:
         specifier: 0.78.2
         version: 0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0)
+      react-native-ble-plx:
+        specifier: ^3.5.0
+        version: 3.5.0(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0)
       react-native-bootsplash:
         specifier: 6.3.4
         version: 6.3.4(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0)
@@ -4757,6 +4760,13 @@ packages:
 
   react-is@19.1.0:
     resolution: {integrity: sha512-Oe56aUPnkHyyDxxkvqtd7KkdQP5uIUfHxd5XTb3wE9d/kRnZLmKbDB0GWk919tdQ+mxxPtG6EAs6RMT6i1qtHg==}
+
+  react-native-ble-plx@3.5.0:
+    resolution: {integrity: sha512-PeSnRswHLwLRVMQkOfDaRICtrGmo94WGKhlSC09XmHlqX2EuYgH+vNJpGcLkd8lyiYpEJyf8wlFAdj9Akliwmw==}
+    engines: {node: '>= 18.0.0'}
+    peerDependencies:
+      react: '*'
+      react-native: '*'
 
   react-native-bootsplash@6.3.4:
     resolution: {integrity: sha512-d+2pYlp8rvJRHDrMYjqXFmDxTPD/1eaa57Y60gpb/qLGmEX6ErSRIIGLOELtH2BPtPoyOS1yCeGOZqE7L30gVQ==}
@@ -10999,6 +11009,11 @@ snapshots:
   react-is@18.3.1: {}
 
   react-is@19.1.0: {}
+
+  react-native-ble-plx@3.5.0(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0):
+    dependencies:
+      react: 19.0.0
+      react-native: 0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0)
 
   react-native-bootsplash@6.3.4(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0):
     dependencies:

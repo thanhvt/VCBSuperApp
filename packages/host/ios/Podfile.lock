@@ -34,6 +34,7 @@ PODS:
     - hermes-engine/Pre-built (= 0.78.2)
   - hermes-engine/Pre-built (0.78.2)
   - JWTDecode (3.0.1)
+  - MultiplatformBleAdapter (0.2.0)
   - RCT-Folly (2024.11.18.00):
     - boost
     - DoubleConversion
@@ -1264,6 +1265,28 @@ PODS:
     - React-jsiexecutor
     - React-RCTFBReactNativeSpec
     - ReactCommon/turbomodule/core
+  - react-native-ble-plx (3.5.0):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - MultiplatformBleAdapter (= 0.2.0)
+    - RCT-Folly (= 2024.11.18.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - react-native-bottom-tabs (0.9.0):
     - DoubleConversion
     - glog
@@ -1824,6 +1847,7 @@ DEPENDENCIES:
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
   - React-microtasksnativemodule (from `../node_modules/react-native/ReactCommon/react/nativemodule/microtasks`)
+  - react-native-ble-plx (from `../node_modules/react-native-ble-plx`)
   - react-native-bottom-tabs (from `../node_modules/react-native-bottom-tabs`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-webview (from `../node_modules/react-native-webview`)
@@ -1866,6 +1890,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - JWTDecode
+    - MultiplatformBleAdapter
     - SDWebImage
     - SDWebImageSVGCoder
     - SocketRocket
@@ -1952,6 +1977,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   React-microtasksnativemodule:
     :path: "../node_modules/react-native/ReactCommon/react/nativemodule/microtasks"
+  react-native-ble-plx:
+    :path: "../node_modules/react-native-ble-plx"
   react-native-bottom-tabs:
     :path: "../node_modules/react-native-bottom-tabs"
   react-native-safe-area-context:
@@ -2036,6 +2063,7 @@ SPEC CHECKSUMS:
   glog: eb93e2f488219332457c3c4eafd2738ddc7e80b8
   hermes-engine: 2771b98fb813fdc6f92edd7c9c0035ecabf9fee7
   JWTDecode: 2eed97c2fa46ccaf3049a787004eedf0be474a87
+  MultiplatformBleAdapter: b1fddd0d499b96b607e00f0faa8e60648343dc1d
   RCT-Folly: 36fe2295e44b10d831836cc0d1daec5f8abcf809
   RCTDeprecation: be794de7dc6ed8f9f7fbf525f86e7651b8b68746
   RCTRequired: a83787b092ec554c2eb6019ff3f5b8d125472b3b
@@ -2066,6 +2094,7 @@ SPEC CHECKSUMS:
   React-logger: 304814ae37503c8eb54359851cc55bd4f936b39c
   React-Mapbuffer: b588d1ca18d2ce626f868f04ab12d8b1f004f12c
   React-microtasksnativemodule: 11831d070aa47755bb5739069eb04ec621fec548
+  react-native-ble-plx: a9a719a39e5f286b2ea787698ffe3209e263c20a
   react-native-bottom-tabs: fc5e14d808955f61cbdbf81e69c0e27c68ec3280
   react-native-safe-area-context: 286b3e7b5589795bb85ffc38faf4c0706c48a092
   react-native-webview: ca20dfd45204cc81f0b21e70d1e5a349daecfb81
@@ -2110,4 +2139,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 34b4852eb8f7b72bc846594aa49111685f3cc131
 
-COCOAPODS: 1.16.2
+COCOAPODS: 1.15.2
