@@ -417,6 +417,9 @@ importers:
       react-native-paper:
         specifier: 5.12.5
         version: 5.12.5(patch_hash=jbcjvd6hhp2gtyomtoldpygoay)(react-native-safe-area-context@5.3.0(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0))(react-native-vector-icons@10.2.0)(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0)
+      react-native-permissions:
+        specifier: ^5.4.0
+        version: 5.4.0(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0)
       react-native-safe-area-context:
         specifier: 5.3.0
         version: 5.3.0(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0)
@@ -426,6 +429,9 @@ importers:
       react-native-vector-icons:
         specifier: 10.2.0
         version: 10.2.0
+      react-native-vision-camera:
+        specifier: ^4.6.4
+        version: 4.6.4(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0)
       react-native-webview:
         specifier: 13.13.5
         version: 13.13.5(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0)
@@ -4813,6 +4819,16 @@ packages:
       react-native-safe-area-context: '*'
       react-native-vector-icons: '*'
 
+  react-native-permissions@5.4.0:
+    resolution: {integrity: sha512-D+YOIss+aKXi/VuZvm7hAq4WSugYyif58AIAWsT2/uLh9pz9ukOttGzPttjrv617J3bOEnt7C6cJBWoXmj/QRw==}
+    peerDependencies:
+      react: '>=18.1.0'
+      react-native: '>=0.70.0'
+      react-native-windows: '>=0.70.0'
+    peerDependenciesMeta:
+      react-native-windows:
+        optional: true
+
   react-native-safe-area-context@5.3.0:
     resolution: {integrity: sha512-glV9bwuozTjf/JDBIBm+ITnukHNaUT3nucgdeADwjtHsfEN3RL5UO6nq99vvdWv5j/O9yCZBvFncM1BBQ+UvpQ==}
     peerDependencies:
@@ -4831,6 +4847,22 @@ packages:
   react-native-vector-icons@10.2.0:
     resolution: {integrity: sha512-n5HGcxUuVaTf9QJPs/W22xQpC2Z9u0nb0KgLPnVltP8vdUvOp6+R26gF55kilP/fV4eL4vsAHUqUjewppJMBOQ==}
     hasBin: true
+
+  react-native-vision-camera@4.6.4:
+    resolution: {integrity: sha512-d998uTHsGJ9bTlsClgT37RK1sK7ZQekv5y6ylynds3vmdK6YbFQJUoi2cvMrFN4dp9qvSlCjEfwekjMIz3guQA==}
+    peerDependencies:
+      '@shopify/react-native-skia': '*'
+      react: '*'
+      react-native: '*'
+      react-native-reanimated: '*'
+      react-native-worklets-core: '*'
+    peerDependenciesMeta:
+      '@shopify/react-native-skia':
+        optional: true
+      react-native-reanimated:
+        optional: true
+      react-native-worklets-core:
+        optional: true
 
   react-native-webview@13.13.5:
     resolution: {integrity: sha512-MfC2B+woL4Hlj2WCzcb1USySKk+SteXnUKmKktOk/H/AQy5+LuVdkPKm8SknJ0/RxaxhZ48WBoTRGaqgR137hw==}
@@ -11088,6 +11120,11 @@ snapshots:
       react-native-vector-icons: 10.2.0
       use-latest-callback: 0.1.6(react@19.0.0)
 
+  react-native-permissions@5.4.0(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0):
+    dependencies:
+      react: 19.0.0
+      react-native: 0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0)
+
   react-native-safe-area-context@5.3.0(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0):
     dependencies:
       react: 19.0.0
@@ -11106,6 +11143,11 @@ snapshots:
     dependencies:
       prop-types: 15.8.1
       yargs: 16.2.0
+
+  react-native-vision-camera@4.6.4(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0):
+    dependencies:
+      react: 19.0.0
+      react-native: 0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0)
 
   react-native-webview@13.13.5(react-native@0.78.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli@15.0.1(typescript@5.6.3))(@types/react@19.0.12)(react@19.0.0))(react@19.0.0):
     dependencies:

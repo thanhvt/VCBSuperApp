@@ -1727,6 +1727,27 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
+  - RNPermissions (5.4.0):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.11.18.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - RNScreens (4.10.0):
     - DoubleConversion
     - glog
@@ -1803,6 +1824,12 @@ PODS:
   - SwiftyRSA (1.7.0):
     - SwiftyRSA/ObjC (= 1.7.0)
   - SwiftyRSA/ObjC (1.7.0)
+  - VisionCamera (4.6.4):
+    - VisionCamera/Core (= 4.6.4)
+    - VisionCamera/React (= 4.6.4)
+  - VisionCamera/Core (4.6.4)
+  - VisionCamera/React (4.6.4):
+    - React-Core
   - Yoga (0.0.0)
 
 DEPENDENCIES:
@@ -1881,10 +1908,12 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNBootSplash (from `../node_modules/react-native-bootsplash`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
+  - RNPermissions (from `../node_modules/react-native-permissions`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - SDWebImage
   - SDWebImageSVGCoder
+  - VisionCamera (from `../node_modules/react-native-vision-camera`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -2045,10 +2074,14 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-bootsplash"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-async-storage/async-storage"
+  RNPermissions:
+    :path: "../node_modules/react-native-permissions"
   RNScreens:
     :path: "../node_modules/react-native-screens"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
+  VisionCamera:
+    :path: "../node_modules/react-native-vision-camera"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -2128,6 +2161,7 @@ SPEC CHECKSUMS:
   ReactCommon: 547db015202a80a5b3e7e041586ea54c4a087180
   RNBootSplash: 1d0409dd59f1417c9427ba5aacdc019194b54d29
   RNCAsyncStorage: 79abd79de4e908438a71008c0642c8f0548ba3c3
+  RNPermissions: a2cd23de7ebc30503f11005efc037608ba6c233d
   RNScreens: 0f01bbed9bd8045a8d58e4b46993c28c7f498f3c
   RNVectorIcons: 14a0c42f16a26bcc3e79a19bc1c5718284b1d469
   SDWebImage: f84b0feeb08d2d11e6a9b843cb06d75ebf5b8868
@@ -2135,8 +2169,9 @@ SPEC CHECKSUMS:
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   SwiftUIIntrospect: fee9aa07293ee280373a591e1824e8ddc869ba5d
   SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
+  VisionCamera: b5c2b3c45e641102902a5194af11dc532805221e
   Yoga: e14bad835e12b6c7e2260fc320bd00e0f4b45add
 
 PODFILE CHECKSUM: 34b4852eb8f7b72bc846594aa49111685f3cc131
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

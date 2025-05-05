@@ -35,6 +35,8 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs access to camera to take photos and test camera functionality.</string>
 	<key>RepackPublicKey</key>
 	<string>-----BEGIN PUBLIC KEY-----
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAvR2JseYMjDTie9MYo/Tw
